@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贪吃蛇小游戏</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hud" aria-label="游戏状态">
+      <div>
+        <span>分数</span>
+        <strong id="score">0</strong>
+      </div>
+      <div>
+        <span>最高分</span>
+        <strong id="bestScore">0</strong>
+      </div>
+      <div>
+        <span>速度</span>
+        <strong id="speedLabel">1x</strong>
+      </div>
+    </section>
+
+    <section class="board-wrap" aria-label="贪吃蛇棋盘">
+      <canvas id="game" width="480" height="480"></canvas>
+      <div id="overlay" class="overlay">
+        <h1>贪吃蛇</h1>
+        <p>吃到红果得分，越吃越快。</p>
+        <button id="startButton" type="button">开始游戏</button>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="游戏控制">
+      <button id="pauseButton" type="button">暂停</button>
+      <button id="restartButton" type="button">重新开始</button>
+    </section>
+
+    <section class="pad" aria-label="方向控制">
+      <button type="button" data-dir="up" aria-label="向上">↑</button>
+      <button type="button" data-dir="left" aria-label="向左">←</button>
+      <button type="button" data-dir="down" aria-label="向下">↓</button>
+      <button type="button" data-dir="right" aria-label="向右">→</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
